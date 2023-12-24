@@ -2,8 +2,55 @@
 -- List of all default plugins & their definitions
 local default_plugins = {
 
-  "nvim-lua/plenary.nvim",
+  -- {
+  --   "mg979/vim-visual-multi",
+  --   lazy = false,
+  -- },
+  {
+    "nvimdev/dashboard-nvim",
+    event = "VimEnter",
+    config = function()
 
+      require("dashboard").setup({
+        theme = 'hyper',
+        change_to_vcs_root = true,
+        config = {
+          week_header = {
+           enable = true,
+          },
+          project = { enable = true, icon = ""},
+          shortcut = {
+            {
+              desc = ' Files ',
+              group = 'Label',
+              action = 'Telescope find_files',
+              key = 'f',
+            },
+            {
+              desc = ' GitHub ',
+              group = 'String',
+              action = 'terminal open https://github.com',
+              key = 'g',
+            },
+          },
+        },
+      })
+      -- require("dashboard").setup {
+      --   theme = "hyper",
+      --   change_to_vcs_root = true,
+      --   config = {
+      --     week_header = { enable = true, concat = "Hello world"},
+      --     project = { enable = true, icon = ""}
+      --   }
+      -- }
+    end,
+    dependencies = { {'nvim-tree/nvim-web-devicons'} },
+  },
+  "nvim-lua/plenary.nvim",
+  {
+    "eandrju/cellular-automaton.nvim",
+    lazy = false,
+  },
   {
     "NvChad/base46",
     branch = "v2.0",

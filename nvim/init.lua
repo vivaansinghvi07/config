@@ -18,9 +18,13 @@ end
 
 dofile(vim.g.base46_cache .. "defaults")
 vim.opt.rtp:prepend(lazypath)
+vim.wo.relativenumber = true
+
+-- remember :lua require("base46").toggle_transparency()
+
 require "plugins"
 
 -- local Plug = vim.fn['plug#']
-vim.cmd('call plug#begin()')
-vim.cmd('Plug \'xiyaowong/transparent.nvim\'')
-vim.cmd('call plug#end()')
+-- vim.cmd('call plug#begin()')
+-- vim.cmd('Plug \'xiyaowong/transparent.nvim\'')
+-- vim.cmd('call plug#end()')

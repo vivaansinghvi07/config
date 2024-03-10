@@ -22,6 +22,11 @@ vim.wo.relativenumber = true
 
 -- remember :lua require("base46").toggle_transparency()
 
+-- :tnoremap <Esc> <C-\><C-n>
+vim.keymap.set('t', '<Esc>', '<C-\\><C-n>')
+vim.opt.wrap = false
+vim.opt.scrolloff = 5
+vim.opt.sidescrolloff = 40
 require "plugins"
 
 -- local Plug = vim.fn['plug#']

@@ -7,6 +7,18 @@ local default_plugins = {
   --   lazy = false,
   -- },
   {
+    "michaelrommel/nvim-silicon",
+    lazy = false,
+    cmd = "Snap",
+    config = function()
+      require("silicon").setup({
+        font = "JetBrainsMono Nerd Font=34",
+        to_clipboard=true,
+        theme="OneHalfDark"
+      })
+    end
+  },
+  {
     "nvimdev/dashboard-nvim",
     event = "VimEnter",
     config = function()
@@ -18,7 +30,7 @@ local default_plugins = {
           week_header = {
            enable = true,
           },
-          project = { enable = true, icon = ""},
+          project = { enable = true, icon = "", limit = 8},
           shortcut = {
             {
               desc = ' Files ',

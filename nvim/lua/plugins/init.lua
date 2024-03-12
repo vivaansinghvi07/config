@@ -12,9 +12,13 @@ local default_plugins = {
     cmd = "Snap",
     config = function()
       require("silicon").setup({
-        font = "JetBrainsMono Nerd Font=34",
+        font = "Iosevka Nerd Font Mono=34",
         to_clipboard=true,
-        theme="OneHalfDark"
+        theme="OneHalfDark",
+        code_pad_right=75,
+        line_offset=function (args)
+          return args.line1
+        end
       })
     end
   },

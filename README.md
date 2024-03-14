@@ -1,10 +1,12 @@
 # Config 
 
-These are my configuration files on my computer. It runs on macOS, using the following:
+These are the configuration files on my computer. It runs on macOS, using the following:
 
 - Homebrew
 - iTerm2
-- Z-shell
+- Zsh
+
+It includes custom commands, a custom Neovim configuration, a custom Zsh runtime, Homebrew formulae, and whatever else I decide to add.
 
 To setup everything, simply run the following:
 

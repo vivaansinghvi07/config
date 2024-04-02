@@ -13,3 +13,5 @@ if [ -d ~/.config/nvim ] then
   rm -rf ~/.config/nvim
 fi 
 mv nvim ~/.config/
+
+mv ./github_dark.lua ~/.local/share/nvim/lazy/base46/lua/base46/themes/github_dark.lua

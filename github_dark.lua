@@ -1,5 +1,7 @@
 -- credits to original theme for existing https://github.com/primer/github-vscode-theme
 -- This is a modified version of it
+--
+-- Vivaan's note: this is a modified version of that version, which comes with NVChad
 
 local M = {}
 

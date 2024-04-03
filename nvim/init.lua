@@ -26,7 +26,7 @@ vim.wo.relativenumber = true
 vim.keymap.set('t', '<Esc>', '<C-\\><C-n>')
 vim.opt.wrap = false
 vim.opt.scrolloff = 5
-vim.opt.sidescrolloff = 40
+vim.opt.sidescrolloff = 10
 require "plugins"
 
 -- local Plug = vim.fn['plug#']

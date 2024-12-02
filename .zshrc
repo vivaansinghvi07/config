@@ -126,7 +126,11 @@ function venv() {
     return
   fi
 
-  venv_name=".$(basename $PWD)-venv"
+  if [ ! -z $1 ]; then 
+    venv_name=$1 
+  else 
+    venv_name=".$(basename $PWD)-venv"
+  fi
 
   if [ ! -d $venv_name ]; then
     python3.11 -m venv $venv_name
@@ -147,7 +151,6 @@ function ipyinit() {
 }
 
 function nb() {
-  name="$(basename $PWD)-venv"
   venv
   uv pip install ipykernel
   ipyinit

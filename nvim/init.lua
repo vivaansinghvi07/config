@@ -23,10 +23,18 @@ vim.wo.relativenumber = true
 -- remember :lua require("base46").toggle_transparency()
 
 -- :tnoremap <Esc> <C-\><C-n>
+vim.g.loaded_python3_provider=1
+vim.g.python3_host_prog = '/usr/local/bin/python3.11'
 vim.keymap.set('t', '<Esc>', '<C-\\><C-n>')
+vim.api.nvim_set_keymap("n", "k", "gk", { noremap = true})
+vim.api.nvim_set_keymap("n", "j", "gj", { noremap = true})
+vim.api.nvim_set_keymap("n", "gk", "k", { noremap = true})
+vim.api.nvim_set_keymap("n", "gj", "j", { noremap = true})
 vim.opt.wrap = false
 vim.opt.scrolloff = 5
 vim.opt.sidescrolloff = 10
+vim.g.maplocalleader = ','
+
 require "plugins"
 
 -- local Plug = vim.fn['plug#']

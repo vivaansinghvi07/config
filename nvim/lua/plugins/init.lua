@@ -6,6 +6,18 @@ local default_plugins = {
   --   "mg979/vim-visual-multi",
   --   lazy = false,
   -- },
+  -- {
+  --   "luk400/vim-jukit",
+  --   lazy = false,
+  -- },
+  {
+    'Olical/conjure',
+    lazy=true
+  },
+  {
+    'nanotee/zoxide.vim',
+    lazy=false
+  },
   {
     "michaelrommel/nvim-silicon",
     lazy = false,
@@ -18,7 +30,10 @@ local default_plugins = {
         code_pad_right=75,
         line_offset=function (args)
           return args.line1
-        end
+        end,
+        window_title = function()
+          return vim.fn.fnamemodify(vim.fn.bufname(vim.fn.bufnr()), ':~:.')
+        end,
       })
     end
   },
